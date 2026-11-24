@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rosemarie García · Enlaces</title>
+<meta name="description" content="Product Owner & Product Ops · Community builder. Proyectos, comunidad, talleres y contacto.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,400;1,9..144,600&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0B3C49; --ink-soft:#3E5F68; --teal:#0F7470; --turquoise:#2EC4B6;
+    --cream:#FFFDF8; --sand:#F6F2EA; --line:#EFE6D6;
+    --mint:#CFEFEA; --rose:#F4B6C6; --rose-soft:#FADDE5; --sun:#F2B33D; --sun-soft:#FBE8BF;
+    --display:"Fraunces", Georgia, serif;
+    --sans:"Manrope", system-ui, sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    background:var(--sand); color:var(--ink); font-family:var(--sans);
+    min-height:100vh; overflow-x:hidden;
+  }
+  .page{max-width:480px;margin:0 auto;padding:40px 24px 56px;position:relative}
+
+  /* Estrella decorativa */
+  .star{position:absolute;top:-30px;right:-60px;width:220px;height:220px;z-index:0;opacity:.9}
+  .star-small{position:absolute;top:210px;left:-14px;width:34px;z-index:0}
+
+  header{position:relative;z-index:1}
+  h1{font-size:46px;font-weight:800;letter-spacing:-.025em;line-height:1}
+  h1 em{font-family:var(--display);font-style:italic;font-weight:600;color:var(--teal)}
+  .eyebrow{
+    margin-top:18px;font-size:12px;font-weight:700;letter-spacing:.22em;
+    text-transform:uppercase;line-height:1.9;color:var(--ink)
+  }
+  .eyebrow span{color:var(--teal)}
+
+  /* ===== Círculo con proyectos ===== */
+  .orbit{
+    position:relative;width:86%;max-width:360px;aspect-ratio:1;margin:56px auto 20px;
+  }
+  .ring{position:absolute;inset:0;border-radius:50%;background:var(--ink)}
+  .core{
+    position:absolute;inset:23%;border-radius:50%;background:var(--cream);
+    display:grid;place-items:center;
+  }
+  .curve{position:absolute;inset:0;width:100%;height:100%}
+  .curve text{
+    font-family:var(--sans);font-size:9px;font-weight:700;letter-spacing:.26em;fill:var(--turquoise)
+  }
+  .photo{
+    position:relative;width:72%;aspect-ratio:1;border-radius:50%;overflow:hidden;
+    border:3px solid var(--turquoise);background:var(--mint);
+    display:grid;place-items:center;
+  }
+  .photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .monogram{font-family:var(--display);font-style:italic;font-size:54px;color:var(--ink);line-height:1}
+  .monogram b{color:var(--teal);font-weight:600}
+
+  .project{
+    position:absolute;width:30%;text-decoration:none;color:var(--ink);
+    display:flex;flex-direction:column;align-items:center;gap:6px;
+    animation:float 6s ease-in-out infinite;
+  }
+  .project .bubble{
+    width:100%;aspect-ratio:1;border-radius:50%;border:4px solid var(--cream);
+    display:grid;place-items:center;font-size:clamp(30px,9vw,42px);
+    box-shadow:0 8px 20px rgba(11,60,73,.25);transition:transform .2s ease;
+  }
+  .project:hover .bubble,.project:focus-visible .bubble{transform:scale(1.07)}
+  .project .label{
+    background:var(--cream);border-radius:999px;padding:4px 10px;
+    font-size:11px;font-weight:800;white-space:nowrap;box-shadow:0 2px 6px rgba(11,60,73,.15)
+  }
+  .p1{top:-12%;left:35%}             .p1 .bubble{background:var(--sun)}
+  .p2{top:46%;right:-14%;animation-delay:-2s}  .p2 .bubble{background:var(--mint)}
+  .p3{top:46%;left:-14%;animation-delay:-4s}   .p3 .bubble{background:var(--rose)}
+  @keyframes float{0%,100%{translate:0 0}50%{translate:0 -6px}}
+
+  .hint{text-align:center;font-size:13px;color:var(--ink-soft);margin:44px 0 28px}
+  .hint em{font-family:var(--display);color:var(--teal)}
+
+  /* ===== Lista de enlaces ===== */
+  nav ul{list-style:none;border-top:1.5px solid var(--ink)}
+  nav li{border-bottom:1.5px solid var(--ink)}
+  nav a{
+    display:flex;align-items:center;gap:16px;padding:20px 4px;
+    text-decoration:none;color:var(--ink);
+  }
+  .dot{
+    flex:none;width:52px;height:52px;border-radius:50%;display:grid;place-items:center;font-size:22px
+  }
+  .txt{flex:1}
+  .txt strong{display:block;font-size:17px;font-weight:800;letter-spacing:.04em;text-transform:uppercase}
+  .txt span{display:block;font-size:15px;color:var(--ink-soft);line-height:1.45;margin-top:3px}
+  .arrow{color:var(--teal);font-size:22px;font-weight:700;transition:transform .2s ease}
+  nav a:hover .arrow,nav a:focus-visible .arrow{transform:translateX(5px)}
+
+  a:focus-visible{outline:3px solid var(--teal);outline-offset:4px;border-radius:12px}
+
+  footer{text-align:center;margin-top:40px;font-size:12px;color:var(--ink-soft)}
+  footer em{font-family:var(--display);color:var(--teal)}
+
+  @media (prefers-reduced-motion:reduce){
+    .project{animation:none}
+    .project .bubble,.arrow{transition:none}
+  }
+</style>
+</head>
+<body>
+<main class="page">
+
+  <!-- Estrellas decorativas -->
+  <svg class="star" viewBox="0 0 100 100" aria-hidden="true">
+    <path d="M50 4 61 37 96 38 68 58 78 92 50 72 22 92 32 58 4 38 39 37Z" fill="#F4B6C6"/>
+  </svg>
+  <svg class="star-small" viewBox="0 0 100 100" aria-hidden="true">
+    <path d="M50 0 58 42 100 50 58 58 50 100 42 58 0 50 42 42Z" fill="#2EC4B6"/>
+  </svg>
+
+  <header>
+    <h1>Rosemarie <em>García</em></h1>
+    <p class="eyebrow">Product Owner <span>·</span> Product Ops <span>·</span><br>Community builder</p>
+  </header>
+
+  <!-- ===== Círculo con tus 3 proyectos ===== -->
+  <section class="orbit" aria-label="Mis proyectos">
+    <div class="ring"></div>
+
+    <!-- Texto curvo -->
+    <svg class="curve" viewBox="0 0 200 200" aria-hidden="true">
+      <defs><path id="arc" d="M 34 100 A 66 66 0 0 0 166 100"/></defs>
+      <text><textPath href="#arc" startOffset="50%" text-anchor="middle">✦ TOCA UN PROYECTO ✦</textPath></text>
+    </svg>
+
+    <div class="core">
+      <div class="photo">
+        <span class="monogram">R<b>G</b></span>
+        <!-- Sube tu foto al repo con el nombre foto.jpg y aparecerá aquí -->
+        <img src="foto.jpg" alt="Rosemarie García" onerror="this.remove()">
+      </div>
+    </div>
+
+    <!-- CAMBIA AQUÍ los enlaces de los proyectos si hace falta -->
+    <a class="project p1" href="https://rosesunshineg.github.io/que-fem-mataro/" target="_blank" rel="noopener">
+      <span class="bubble" aria-hidden="true">📅</span>
+      <span class="label">Què fem a Mataró</span>
+    </a>
+    <a class="project p2" href="https://rosesunshineg.github.io/juegos-repaso/" target="_blank" rel="noopener">
+      <span class="bubble" aria-hidden="true">🚂</span>
+      <span class="label">Juegos de repaso</span>
+    </a>
+    <a class="project p3" href="#" target="_blank" rel="noopener"><!-- pon aquí el enlace de Viva Voz -->
+      <span class="bubble" aria-hidden="true">🎙️</span>
+      <span class="label">Viva Voz</span>
+    </a>
+  </section>
+
+  <p class="hint">Agenda local, juegos para aprender y un CV que se crea <em>hablando</em>.</p>
+
+  <!-- ===== Lista de enlaces ===== -->
+  <nav aria-label="Enlaces">
+    <ul>
+      <li><a href="#" target="_blank" rel="noopener"><!-- pon aquí el enlace de tu portafolio nuevo -->
+        <span class="dot" style="background:var(--mint)" aria-hidden="true">💼</span>
+        <span class="txt"><strong>Portafolio</strong><span>Casos de estudio de producto, UX y operaciones.</span></span>
+        <span class="arrow" aria-hidden="true">→</span>
+      </a></li>
+      <li><a href="#" target="_blank" rel="noopener"><!-- enlace de Women Techmakers BCN / GDG -->
+        <span class="dot" style="background:var(--rose)" aria-hidden="true">🤝</span>
+        <span class="txt"><strong>Comunidad</strong><span>Women Techmakers BCN y GDG Barcelona.</span></span>
+        <span class="arrow" aria-hidden="true">→</span>
+      </a></li>
+      <li><a href="#" target="_blank" rel="noopener"><!-- enlace a tus talleres -->
+        <span class="dot" style="background:var(--sun)" aria-hidden="true">🎤</span>
+        <span class="txt"><strong>Talleres y charlas</strong><span>Formaciones sobre herramientas digitales, producto y comunidad.</span></span>
+        <span class="arrow" aria-hidden="true">→</span>
+      </a></li>
+      <li><a href="https://www.linkedin.com/in/rosesunshine" target="_blank" rel="noopener">
+        <span class="dot" style="background:var(--mint)" aria-hidden="true">in</span>
+        <span class="txt"><strong>LinkedIn</strong><span>Mi trayectoria y lo que estoy construyendo.</span></span>
+        <span class="arrow" aria-hidden="true">→</span>
+      </a></li>
+      <li><a href="mailto:rose.garcia.lopez@gmail.com">
+        <span class="dot" style="background:var(--rose-soft)" aria-hidden="true">✉️</span>
+        <span class="txt"><strong>Contacto</strong><span>¿Hablamos? Escríbeme.</span></span>
+        <span class="arrow" aria-hidden="true">→</span>
+      </a></li>
+    </ul>
+  </nav>
+
+  <footer>Hecho con <em>cariño</em> en Mataró ✦</footer>
+</main>
+</body>
+</html>
